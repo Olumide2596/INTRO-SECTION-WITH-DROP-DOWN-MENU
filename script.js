@@ -1,5 +1,5 @@
 'use strict';
-const outside = document.querySelector('body');
+const outside = document.querySelector('main');
 const features = document.querySelector('.features-btn');
 const company = document.querySelector('.company-btn');
 const featuresMenu = document.querySelector('.features');
@@ -18,11 +18,9 @@ company.addEventListener('click', function (e) {
 	featuresMenu.classList.remove('visible');
 });
 
-// outside.addEventListener('click', function (e) {
-// 	e.preventDefault();
-// 	if (
-// 		featuresMenu.classList.contains('visible')
-// 	) {
+outside.addEventListener('click', function (e) {
+	e.preventDefault();
 
-// 	}
-// });
+	featuresMenu.classList.remove('visible');
+	companyMenu.classList.remove('visible');
+});
