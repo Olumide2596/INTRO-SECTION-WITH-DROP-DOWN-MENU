@@ -38,19 +38,19 @@ header {
 .logo img {
 	width: 100%;
 }
-nav {
+.nav {
 	display: flex;
 	justify-content: space-between;
 	width: 90%;
 }
-nav ul {
+.nav ul {
 	display: flex;
 	align-items: center;
 }
-nav li {
+.nav li {
 	margin-left: 40px;
 }
-li img {
+.nav li img {
 	margin-left: 5px;
 }
 
@@ -65,14 +65,7 @@ li img {
 	color: #000;
 	cursor: pointer;
 }
-.absolute {
-	/* position: relative; */
 
-	/* display: flex;
-	width: 100%;
-	justify-content: center;
-	align-items: center; */
-}
 .features,
 .company {
 	position: absolute;
@@ -86,9 +79,6 @@ li img {
 	left: 120px;
 	opacity: 0;
 	transition: all linear 500ms;
-}
-.visible {
-	opacity: 100;
 }
 
 .features div {
@@ -188,40 +178,16 @@ button:hover {
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
+
+/* MOBILE MENU */
+
 .mobile {
 	display: none;
 }
-
-/* .mobile-menu {
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	margin-top: -20px;
-	background-color: hsla(0, 0%, 8%, 0.5);
-	display: flex;
-	font-size: 20px;
-	color: hsl(0, 0%, 41%);
+.visible {
+	opacity: 100;
 }
 
-.mobile-nav-nav {
-	padding: 40px 20px;
-	width: 70vw;
-	height: 100vh;
-	background-color: #fff;
-	display: flex;
-}
-.mobile-nav-nav img {
-	margin-left: 80%;
-}
-.mobile-nav-nav ul {
-	width: 100%;
-	margin-top: 50px;
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	gap: 20px;
-	margin-left: 0;
-} */
 @media only screen and (max-width: 600px) {
 	body {
 		padding: 20px 0;
@@ -238,12 +204,88 @@ button:hover {
 		margin-top: 20px;
 		padding: 0;
 	}
-	.mobile {
-		display: block;
+
+	.platform {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background-color: hsla(0, 0%, 8%, 0.7);
+		height: 100%;
+		display: flex;
+		font-size: 20px;
+		color: hsl(0, 0%, 41%);
+		font-size: 22px;
 	}
-	.desktop {
-		display: none;
+
+	.empty {
+		width: 30%;
 	}
+
+	.mobile-nav {
+		padding: 40px 20px;
+		width: 70%;
+		height: 100%;
+		background-color: #fff;
+		display: flex;
+	}
+	.mobile-nav nav {
+		width: 100%;
+	}
+	.close {
+		margin-left: 90%;
+		cursor: pointer;
+	}
+	.hamburger {
+		cursor: pointer;
+	}
+	li a img {
+		margin-left: 10px;
+	}
+	.navigation li {
+		/* width: 100%; */
+		margin-top: 30px;
+		gap: 20px;
+		margin-left: 20px;
+	}
+
+	.mobile-key {
+		text-align: center;
+		list-style: none;
+		width: 100%;
+		display: flex;
+		margin-top: 50px;
+		gap: 50px;
+		flex-direction: column;
+	}
+	.register-mobile {
+		border: 2px solid hsl(0, 0%, 41%);
+		padding: 20px 40px;
+		border-radius: 20px;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.features-mobile,
+	.company-mobile {
+		margin-left: 60px;
+		padding: 20px;
+	}
+	.features-mobile div {
+		margin: 0 auto;
+		display: flex;
+		gap: 20px;
+		margin-top: 20px;
+		align-items: center;
+		cursor: pointer;
+	}
+	.company-mobile p {
+		margin-top: 15px;
+		cursor: pointer;
+	}
+	.features-mobile div img {
+		width: 8%;
+	}
+
 	h1 {
 		font-size: 3.5rem;
 		margin: 40px auto;
@@ -266,5 +308,16 @@ button:hover {
 		font-size: 20px;
 		padding: 25px 50px;
 		border-radius: 15px;
+	}
+	.mobile,
+	.active {
+		display: block;
+	}
+	.flex {
+		display: flex;
+	}
+	.desktop,
+	.in-active {
+		display: none;
 	}
 }

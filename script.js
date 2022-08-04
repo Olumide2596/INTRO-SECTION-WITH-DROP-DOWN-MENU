@@ -24,3 +24,38 @@ outside.addEventListener('click', function (e) {
 	featuresMenu.classList.remove('visible');
 	companyMenu.classList.remove('visible');
 });
+
+// MOBILE JS
+const mobileMenu = document.querySelector('.platform');
+const menuBtn = document.querySelector('.hamburger');
+const menuClose = document.querySelector('.close');
+const featuresMobile = document.querySelector('.features-mobile');
+const companyMobile = document.querySelector('.company-mobile');
+const featuresMobileBtn = document.querySelector('.features-btn-mobile');
+const companyMobileBtn = document.querySelector('.company-btn-mobile');
+const outsideMobile = document.querySelector('.empty');
+
+menuBtn.addEventListener('click', function () {
+	mobileMenu.classList.add('flex');
+	mobileMenu.classList.remove('in-active');
+});
+
+menuClose.addEventListener('click', function () {
+	mobileMenu.classList.remove('flex');
+	mobileMenu.classList.add('in-active');
+});
+outsideMobile.addEventListener('click', function () {
+	mobileMenu.classList.remove('flex');
+	mobileMenu.classList.add('in-active');
+});
+
+featuresMobileBtn.addEventListener('click', function (e) {
+	e.preventDefault();
+
+	featuresMobile.classList.toggle('in-active');
+});
+
+companyMobileBtn.addEventListener('click', function (e) {
+	e.preventDefault();
+	companyMobile.classList.toggle('in-active');
+});
